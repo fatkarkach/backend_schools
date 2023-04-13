@@ -25,6 +25,7 @@ public class AuthenticationController {
 //    return ResponseEntity.ok(service.register(request));
 //  }
 @PostMapping("/register")
+@CrossOrigin(origins = "http://localhost:4200")
 public AuthenticationResponse register(@ModelAttribute RegisterRequest request, @RequestParam("file") MultipartFile my_file) {
   String name_image =null;
 
@@ -46,6 +47,7 @@ public AuthenticationResponse register(@ModelAttribute RegisterRequest request, 
           .build();
 }
   @PostMapping("/authenticate")
+  @CrossOrigin(origins = "http://localhost:4200")
 //  public AuthenticationRequest authenticate(
   public AuthenticationResponse authenticate(
       @RequestBody AuthenticationRequest request

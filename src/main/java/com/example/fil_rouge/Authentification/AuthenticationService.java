@@ -53,7 +53,7 @@ public class AuthenticationService {
     var jwtToken = jwtService.generateToken(user);
     System.out.println(jwtToken);
     return AuthenticationResponse.builder()
-        .token(jwtToken)
+        .token(jwtToken).id(user.getId_user()).role(user.getRole().name())
         .build();
   }
 }

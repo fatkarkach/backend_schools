@@ -20,4 +20,6 @@ public class AuthenticationResponse {
   private String image;
 
   private String token;
+  private String role;
+
 }

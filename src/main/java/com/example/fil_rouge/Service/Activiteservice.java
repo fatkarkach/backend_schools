@@ -44,6 +44,11 @@ public class Activiteservice {
         dto.setDate_activites(activitesData.getDate_activites());
         return dto;
     }
-
+    public List<Activites> getactivites_ma(){
+/*
+        return publicationRepository.findAll();
+*/
+        return activitesRepository.findAll();
+    }
 
 }
